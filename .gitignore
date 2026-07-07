@@ -1,0 +1,21 @@
+# Streamlit secrets � never commit real credentials
+.streamlit/secrets.toml
+
+# Ignore large dataset files
+*.csv
+*.json
+
+# Plan
+streamlit-app-plan.md
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# OS
+.DS_Store
+Thumbs.db
