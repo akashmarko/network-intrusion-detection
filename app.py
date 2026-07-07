@@ -428,18 +428,9 @@ st.markdown(
         gap: 0.2rem !important;
     }
 
-    /* Hide sidebar collapse/expand controls across Streamlit versions */
-    [data-testid="collapsedControl"],
-    [data-testid="stSidebarCollapsedControl"],
-    [data-testid="stSidebarCollapseButton"],
-    button[aria-label="Collapse sidebar"],
-    button[aria-label="Expand sidebar"] {
-        display: none !important;
-        visibility: hidden !important;
-    }
 
     /* 3. Force Sidebar Width */
-    [data-testid="stSidebar"] {
+    [data-testid="stSidebar"][aria-expanded="true"] {
         min-width: 18rem !important;
         max-width: 18rem !important;
     }
