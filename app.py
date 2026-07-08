@@ -530,21 +530,21 @@ with st.sidebar:
         key="input_flag",
     )
     st.number_input(
-        "src_bytes",
+        "Data sent by client (bytes)",
         min_value=0,
         step=1,
         key="input_src_bytes",
         help="Source-to-destination byte count (no upper limit).",
     )
     st.number_input(
-        "dst_bytes",
+        "Data received back (bytes)",
         min_value=0,
         step=1,
         key="input_dst_bytes",
         help="Destination-to-source byte count (no upper limit).",
     )
     st.number_input(
-        "num_failed_logins",
+        "Failed login attempts",
         min_value=0,
         max_value=10,
         step=1,
