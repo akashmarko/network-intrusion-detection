@@ -17,11 +17,9 @@ A machine learning system that analyzes network traffic and classifies it as nor
 ## Table of Contents
 
 - [Overview](#overview)
-- [Why This Matters](#why-this-matters)
 - [How It Works](#how-it-works)
 - [Dataset](#dataset)
 - [Model Results](#model-results)
-- [Screenshots](#screenshots)
 - [Getting Started](#getting-started)
 
 ---
