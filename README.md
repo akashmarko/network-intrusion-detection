@@ -10,6 +10,8 @@ A machine learning system that analyzes network traffic and classifies it as nor
 
 **🚀 Live Demo:** *https://akashmarko-network-intrusion-detection.streamlit.app*
 
+**📈 Data Analytics:** View the full [Data Analytics & Exploration Report](./data-analytics-eda/README_data-analytics.md) to see statistical distributions and data cleaning strategies.
+
 ---
 
 ## Table of Contents
@@ -67,7 +69,7 @@ Streamlit Dashboard
 - **Source:** [Kaggle Network Intrusion Detection NSL-KDD dataset](https://www.kaggle.com/code/timgoodfellow/nsl-kdd-explorations)
 - **Files used:** `KDDTrain+.text` and `cleanTrain_data.csv`( used for training model )
 - **Format:** each row is one network connection, with features like `duration`, `protocol_type`, `service`, `src_bytes`, `dst_bytes`, `num_failed_logins`, and a label marking the traffic class.
-- A deeper exploratory analysis of this same dataset [`/data-analytics-eda`](./data-analytics-eda/).
+- A comprehensive exploratory analysis of this same dataset [`/data-analytics-eda`](./data-analytics-eda/).
 
 ## Model Results
 
