@@ -154,6 +154,8 @@ def _init_session_state(encoders: dict) -> tuple[list, list, list]:
         st.session_state.result = None
     if "error_message" not in st.session_state:
         st.session_state.error_message = None
+    if "notice_dismissed" not in st.session_state:
+        st.session_state.notice_dismissed = False
 
     # Widget state (input_ prefix)
     proto_options = sorted(encoders["protocol_type"].keys())
@@ -479,6 +481,28 @@ for _secret in ("WATSONX_API_KEY", "WATSONX_SCORING_URL"):
         st.stop()
 
 proto_options, service_options, flag_options = _init_session_state(encoders)
+
+
+# ---------------------------------------------------------------------------
+# Capacity notice modal — shown once per session on first load.
+# ---------------------------------------------------------------------------
+
+@st.dialog("⚠️ Notice: Live Predictions Temporarily Paused")
+def _capacity_notice() -> None:
+    st.markdown(
+        "This project's IBM watsonx.ai model deployment has reached its monthly "
+        "**Capacity Unit Hours (CUH)** limit. "
+        "The quota resets automatically at the start of next month. "
+        "You can still explore the full dashboard."
+    )
+    if st.button("Got it, continue to dashboard", type="primary", use_container_width=True):
+        st.session_state.notice_dismissed = True
+        st.rerun()
+
+
+if not st.session_state.notice_dismissed:
+    _capacity_notice()
+
 
 # ---------------------------------------------------------------------------
 # Preset callback — on_click callbacks run before the rerender, so writing to
